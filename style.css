@@ -1,0 +1,272 @@
+/* ============================================================
+   PRÁCTICA EDUCATIVA DE PHISHING — Pantalla de login (2º DAM)
+   Réplica de la pantalla de acceso de Unidad Editorial / MARCA.
+   Carpeta independiente y autocontenida.
+   ============================================================ */
+:root{
+  --marca-red:#E4032E;
+  --ink:#1a1a1a;
+  --grey:#666;
+  --line:#e2e2e2;
+  --blue:#0f62c4;
+  --blue-dark:#0b4f9e;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:#fff;
+}
+a{color:inherit;}
+
+.logo-mark{
+  background:var(--marca-red);
+  color:#fff;
+  padding:2px 8px;
+  border-radius:3px;
+  font-style:normal;
+  margin-right:1px;
+}
+
+/* ---------- FRANJA EDUCATIVA (siempre visible) ---------- */
+.edu-strip{
+  background:#7a0010;
+  color:#ffdede;
+  font-size:12px;
+  text-align:center;
+  padding:6px 12px;
+  line-height:1.4;
+}
+.edu-strip b{color:#fff;}
+
+/* ---------- CONTENEDOR ---------- */
+.auth2-wrap{max-width:560px;margin:0 auto;padding:6px 16px 32px;}
+.auth2-logo{
+  display:inline-flex;align-items:center;
+  margin:16px 2px 10px;text-decoration:none;
+}
+.logo-marca{height:26px;width:auto;display:block;}
+
+/* Tarjeta de dos columnas */
+.auth2-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:0;
+  box-shadow:0 8px 24px rgba(0,0,0,.06);
+}
+.auth2-col{padding:0 18px 20px;}
+.auth2-left{border-right:1px solid var(--line);}
+.auth2-tab{
+  display:block;
+  font-size:13px;font-weight:800;color:var(--ink);
+  padding:12px 18px 11px;
+  margin:0 -18px 16px;
+  background:#f7f7f7;
+  border-top:3px solid transparent;
+  border-bottom:1px solid var(--line);
+  text-decoration:none;
+}
+.auth2-tab-active{background:#fff;border-top-color:var(--marca-red);border-bottom-color:#fff;}
+.auth2-tab-off{background:#f0f0f0;border-top-color:#1a1a1a;color:var(--ink);}
+.auth2-tab-off:hover{background:#e8e8e8;}
+
+/* Campos */
+.field{margin-bottom:13px;}
+.auth2-col input[type="email"],
+.auth2-col input[type="password"],
+.auth2-col input[type="text"]{
+  width:100%;
+  padding:10px 11px;
+  border:1px solid #c9c9c9;
+  border-radius:4px;
+  font-size:13px;
+}
+.auth2-col input:focus{outline:none;border-color:var(--marca-red);box-shadow:0 0 0 1px var(--marca-red);}
+.input-error{border-color:var(--marca-red)!important;box-shadow:0 0 0 1px var(--marca-red);}
+.pass-wrap{position:relative;}
+.pass-wrap input{padding-right:40px;}
+.eye{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;font-size:16px;opacity:.6;
+}
+.hint{display:block;font-size:11px;color:var(--grey);margin-top:4px;line-height:1.35;}
+.hint-error{color:var(--marca-red);}
+
+.check{display:flex;align-items:center;gap:7px;font-size:12px;margin:4px 0 12px;}
+.consent{font-size:11px;color:#444;line-height:1.45;margin:0 0 9px;}
+.consent a,.legal-small a,.responsable a,.auth2-links a{color:var(--marca-red);text-decoration:underline;}
+.radios{display:flex;gap:20px;font-size:12.5px;margin-bottom:14px;}
+.radios label{display:flex;align-items:center;gap:6px;cursor:pointer;}
+.legal-small{font-size:10.5px;color:#666;line-height:1.45;margin:0 0 14px;}
+
+/* Botón principal azul */
+.btn-primary{
+  width:100%;
+  background:var(--blue);
+  color:#fff;border:none;
+  padding:11px;border-radius:4px;
+  font-size:14px;font-weight:800;cursor:pointer;
+}
+.btn-primary:hover{background:var(--blue-dark);}
+
+/* Columna derecha */
+.tambien{text-align:center;font-size:12.5px;color:#444;margin:2px 0 14px;}
+.social{
+  width:100%;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  background:#fff;border:1px solid #c9c9c9;border-radius:4px;
+  padding:9px 10px;margin-bottom:10px;
+  font-size:13px;font-weight:700;color:var(--ink);cursor:pointer;
+}
+.social:hover{background:#f6f6f6;border-color:#aaa;}
+.social svg{flex:none;}
+.responsable{font-size:10.5px;color:#555;line-height:1.45;margin:16px 0 0;}
+
+/* Pie */
+.auth2-footer{text-align:center;margin-top:30px;color:#777;}
+.pubs-title{font-size:11.5px;color:#888;margin:0 0 9px;}
+.pubs{display:flex;justify-content:center;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:12px;}
+.pub{font-size:14px;font-weight:900;color:#333;letter-spacing:-.5px;text-decoration:none;cursor:pointer;}
+.pub:hover{opacity:.7;}
+.pub-marca{color:var(--marca-red);font-style:italic;}
+.pub-expansion{font-style:italic;}
+.pub-telva{letter-spacing:2px;font-weight:700;}
+.auth2-copy{font-size:12px;color:#999;margin:0 0 6px;}
+.auth2-links{font-size:12px;color:#999;margin:0;}
+.auth2-links a{color:#777;text-decoration:none;}
+.auth2-links a:hover{text-decoration:underline;}
+
+@media (max-width:720px){
+  .auth2-card{grid-template-columns:1fr;}
+  .auth2-left{border-right:none;border-bottom:1px solid var(--line);}
+}
+
+/* ---------- PANTALLA DE AVISO (resultado del "ataque") ---------- */
+.alert-overlay{
+  display:none;
+  position:fixed;inset:0;
+  background:#111;
+  color:#fff;
+  align-items:center;justify-content:center;
+  z-index:200;
+  padding:20px;
+}
+.alert-overlay.show{display:flex;}
+.alert-box{max-width:560px;text-align:center;}
+.alert-icon{font-size:50px;margin-bottom:10px;}
+.alert-box h2{color:#ff4d4d;font-size:26px;margin:0 0 14px;}
+.alert-box p{font-size:15px;line-height:1.55;color:#ddd;margin:0 0 14px;}
+.alert-tips{
+  text-align:left;font-size:14px;line-height:1.7;color:#ccc;
+  margin:0 0 26px;padding-left:20px;
+}
+.btn-retry{
+  background:var(--marca-red);color:#fff;border:none;
+  padding:12px 26px;border-radius:4px;
+  font-size:14.5px;font-weight:800;cursor:pointer;
+}
+.btn-retry:hover{background:#B8022A;}
+
+/* ============================================================
+   VISTA "SOLO LOGIN" (login.html) — réplica fiel de la
+   pantalla de acceso de MARCA (imagen de referencia).
+   ============================================================ */
+.lg-page{
+  font-family:'Barlow', 'Roboto', Arial, Helvetica, sans-serif;
+  background:linear-gradient(#f1f3f5 0, #f1f3f5 150px, #fff 150px);
+}
+/* Los campos de formulario (estilo Material) usan Roboto, como en el original */
+.lg-page .mdc-field input,
+.lg-page .mdc-field label,
+.lg-page .mdc-hint{font-family:'Roboto', Arial, sans-serif;}
+.lg-wrap{max-width:520px;margin:0 auto;padding:14px 16px 40px;text-align:center;}
+.lg-logo{display:inline-block;margin:26px 0 16px;}
+.lg-logo .logo-marca{height:28px;}
+
+/* Tarjeta */
+.lg-card{
+  background:#fff;
+  text-align:left;
+  box-shadow:0 1px 3px rgba(0,0,0,.12), 0 10px 26px rgba(0,0,0,.06);
+}
+
+/* Pestañas */
+.lg-tabs{display:grid;grid-template-columns:1fr 1fr;}
+.lg-tab{
+  padding:15px 24px;
+  font-size:15px;font-weight:700;color:#111;
+  text-decoration:none;
+  border-top:3px solid transparent;
+  border-bottom:1px solid #e2e2e2;
+  background:#ededed;
+}
+.lg-tab-active{background:#fff;border-top-color:var(--marca-red);border-bottom-color:#fff;}
+.lg-tab-off:hover{background:#e6e6e6;}
+
+/* Cuerpo */
+.lg-body{padding:26px 40px 34px;}
+
+/* Campo con etiqueta flotante (estilo Material outlined) */
+.mdc-field{position:relative;}
+.mdc-field input{
+  width:100%;height:56px;
+  padding:0 14px;
+  border:1px solid #c4c4c4;border-radius:4px;
+  font-size:15px;color:#111;background:#fff;
+  font-family:inherit;
+}
+.mdc-field input:focus{outline:none;border:2px solid var(--blue);padding:0 13px;}
+.mdc-field label{
+  position:absolute;left:11px;top:50%;transform:translateY(-50%);
+  color:#7a7a7a;font-size:15px;pointer-events:none;
+  background:#fff;padding:0 5px;
+  transition:all .12s ease;
+}
+.mdc-field input:focus + label,
+.mdc-field input:not(:placeholder-shown) + label{
+  top:0;transform:translateY(-50%) scale(.82);color:var(--blue);
+}
+.mdc-hint{display:block;font-size:12px;color:#7a7a7a;margin:5px 0 0 4px;}
+
+/* Estado de error (imita "Este campo es obligatorio") */
+.mdc-field.lg-error input{border:2px solid var(--marca-red);padding:0 13px;}
+.mdc-field.lg-error label{top:0;transform:translateY(-50%) scale(.82);color:var(--marca-red);}
+.mdc-field.lg-error + .mdc-hint{color:var(--marca-red);}
+
+/* Botón Siguiente */
+.lg-next{
+  width:100%;height:50px;margin-top:18px;
+  background:var(--blue);color:#fff;border:none;border-radius:4px;
+  font-size:16px;font-weight:500;letter-spacing:.2px;
+  font-family:inherit;cursor:pointer;
+}
+.lg-next:hover{background:var(--blue-dark);}
+
+/* También puedes + botones sociales */
+.lg-tambien{text-align:center;color:#555;font-size:14px;margin:22px 0 16px;}
+.lg-social{
+  position:relative;width:100%;height:50px;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff;border:1px solid #d4d4d4;border-radius:4px;
+  margin-bottom:12px;
+  font-size:15px;font-weight:700;color:#111;
+  font-family:inherit;cursor:pointer;
+}
+.lg-social:hover{background:#f7f7f7;}
+.lg-ico{position:absolute;left:16px;display:flex;align-items:center;}
+
+/* Pie */
+.lg-footer{text-align:center;margin-top:34px;color:#8a8a8a;}
+.lg-footer-title{font-size:13px;color:#8a8a8a;margin:0 0 12px;}
+.lg-copy{font-size:12px;color:#9a9a9a;margin:14px 0 6px;}
+.lg-links{font-size:12px;color:#9a9a9a;margin:0;line-height:1.9;}
+.lg-links a{color:#7a7a7a;text-decoration:none;}
+.lg-links a:hover{text-decoration:underline;}
+
+@media (max-width:560px){
+  .lg-body{padding:22px 20px 28px;}
+  .lg-tab{padding:14px 14px;font-size:14px;}
+}

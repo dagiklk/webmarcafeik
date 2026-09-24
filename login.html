@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicia sesión - MARCA.com (réplica educativa)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lg-page">
+
+<div class="lg-wrap">
+  <a class="lg-logo" href="https://www.marca.com" target="_blank" rel="noopener" aria-label="MARCA">
+    <svg class="logo-marca" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173 50" fill="#c00" role="img" aria-hidden="true"><path d="M27.9 1.4h15v10.3h-2.6v26.6h2.6v10.4h-16V38.3h2.5V21.7L22 42l-7.3-20.3v16.6h2.6v10.4H1.1V38.3h2.6V11.7H1V1.4h15.6l5.6 16"></path><g class="arca"><path d="M75.1 38.3l-5.9-37H52.3l-5.9 37h-1.9v10.3h14.7V38.3h-1.9l.1-3.9h6.8v3.9h-2v10.3H77V38.3h-1.9zM58.4 28.2l2.3-14.6 2.4 14.6h-4.7z"></path><path d="M107.7 38.3v-9.2l-4-4 4-4V6.4l-4.9-5H78.7v10.2h2.5v26.6h-2.5v10.4h16V38.3h-1.8v-8.5h3.4v18.9h14.1V38.3h-2.7zM96.2 22.4h-3.5V11.6h3.5v10.8z"></path><path d="M132.9 1.4l5 5V21h-11.5v-9.2l-3.4-.1v26.6h3.4v-9.2h11.5v14.5l-5 5.1h-16.3l-4.8-5.1V6.4l4.8-5"></path><path d="M170.1 38.3l-5.9-37h-16.8l-5.9 37h-1.8v10.3h14.6V38.3h-1.9l.1-3.9h6.8v3.9h-1.9v10.3H172V38.3h-1.9zm-16.7-10.1l2.3-14.6 2.4 14.6h-4.7z"></path></g></svg>
+  </a>
+
+  <div class="lg-card">
+    <div class="lg-tabs">
+      <div class="lg-tab lg-tab-active">Inicia sesión</div>
+      <a class="lg-tab lg-tab-off" href="index.html">Regístrate</a>
+    </div>
+
+    <div class="lg-body">
+      <form id="loginForm" novalidate>
+        <div class="mdc-field" id="emailField">
+          <input type="email" id="email" placeholder=" " autocomplete="off">
+          <label for="email">Correo electrónico</label>
+        </div>
+        <small class="mdc-hint" id="emailHint" hidden>Este campo es obligatorio</small>
+
+        <button type="submit" class="lg-next">Siguiente</button>
+      </form>
+
+      <p class="lg-tambien">También puedes:</p>
+
+      <button type="button" class="lg-social" data-prov="Google">
+        <span class="lg-ico">
+          <svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+        </span>
+        Iniciar sesión con Google
+      </button>
+
+      <button type="button" class="lg-social" data-prov="Apple">
+        <span class="lg-ico">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="#000" d="M16.365 1.43c0 1.14-.42 2.2-1.13 2.99-.76.86-2 1.52-3.02 1.44-.13-1.09.42-2.24 1.1-2.98.77-.84 2.1-1.47 3.05-1.45zM20.5 17.2c-.55 1.27-.82 1.83-1.53 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.02-1.94-1-4.03-.99-2.09.01-2.53 1.01-4.07.99-1.73-.02-3.05-1.77-4.04-3.33C-.02 16.9-.46 11.9 1.63 9.2c1.04-1.37 2.68-2.24 4.22-2.24 1.57 0 2.56 1.02 3.86 1.02 1.26 0 2.03-1.02 3.85-1.02 1.37 0 2.82.75 3.85 2.04-3.38 1.85-2.83 6.67.99 8.2z"/>
+          </svg>
+        </span>
+        Iniciar sesión con Apple
+      </button>
+
+      <button type="button" class="lg-social" data-prov="Microsoft">
+        <span class="lg-ico">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <rect x="1" y="1" width="10" height="10" fill="#F25022"/>
+            <rect x="13" y="1" width="10" height="10" fill="#7FBA00"/>
+            <rect x="1" y="13" width="10" height="10" fill="#00A4EF"/>
+            <rect x="13" y="13" width="10" height="10" fill="#FFB900"/>
+          </svg>
+        </span>
+        Iniciar sesión con Microsoft
+      </button>
+    </div>
+  </div>
+
+  <footer class="lg-footer">
+    <p class="lg-footer-title">Unidad Editorial una cuenta para todas nuestras publicaciones</p>
+    <div class="pubs">
+      <a class="pub pub-elmundo" href="https://www.elmundo.es" target="_blank" rel="noopener">EL<b>MUNDO</b></a>
+      <a class="pub pub-marca" href="https://www.marca.com" target="_blank" rel="noopener">MARCA</a>
+      <a class="pub pub-expansion" href="https://www.expansion.com" target="_blank" rel="noopener">Expansión</a>
+      <a class="pub pub-telva" href="https://www.telva.com" target="_blank" rel="noopener">TELVA</a>
+    </div>
+    <p class="lg-copy">© 2026 · Réplica educativa de MARCA — Proyecto académico 2º DAM. No es la web real.</p>
+    <p class="lg-links">
+      <a href="https://www.marca.com/corporativo/terminos-condiciones-uso.html" target="_blank" rel="noopener">Términos y condiciones de uso</a> |
+      <a href="https://www.marca.com/corporativo/politica-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a> |
+      <a href="https://www.marca.com/cookies.html" target="_blank" rel="noopener">Política de cookies</a> |
+      <a href="https://www.ojd.es/" target="_blank" rel="noopener">Certificado por OJD</a> |
+      <a href="https://www.marca.com/corporativo/contacto.html" target="_blank" rel="noopener">Contacto</a>
+    </p>
+  </footer>
+</div>
+
+<!-- ===== PANTALLA DE AVISO (resultado del "ataque") ===== -->
+<div class="alert-overlay" id="alertScreen">
+  <div class="alert-box">
+    <div class="alert-icon">⚠️</div>
+    <h2>Acabas de sufrir un ataque de phishing, ¡cuidado!</h2>
+    <p id="alertUserMsg"></p>
+    <p class="alert-explain">
+      que pasooo ta loco tio hackeado
+      
+
+  
+    <button class="btn-retry" id="retryBtn">Volver</button>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   Réplica de la pantalla de acceso (solo login) — 2º DAM.
+   Los datos NUNCA se guardan ni se envían: se leen en memoria
+   para personalizar el aviso y se descartan.
+   ============================================================ */
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+
+  var form = $("loginForm");
+  var email = $("email");
+  var field = $("emailField");
+  var hint = $("emailHint");
+  var alertScreen = $("alertScreen");
+  var alertUserMsg = $("alertUserMsg");
+
+  function dispararAviso(via) {
+    var correo = email.value.trim();
+    alertUserMsg.textContent = correo
+      ? correo + ", acabas de introducir tu correo" + via + " en una página que imitaba MARCA."
+      : "Acabas de introducir tus datos" + via + " en una página que imitaba MARCA.";
+    alertScreen.classList.add("show");
+    form.reset();               // se descartan los datos introducidos
+    field.classList.remove("lg-error");
+    hint.hidden = true;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!email.value.trim()) {  // imita el estado "Este campo es obligatorio"
+      field.classList.add("lg-error");
+      hint.hidden = false;
+      email.focus();
+      return;
+    }
+    dispararAviso("");
+  });
+
+  email.addEventListener("input", function () {
+    if (email.value.trim()) { field.classList.remove("lg-error"); hint.hidden = true; }
+  });
+
+  var socials = document.querySelectorAll(".lg-social");
+  for (var i = 0; i < socials.length; i++) {
+    socials[i].addEventListener("click", function () {
+      dispararAviso(" con " + this.getAttribute("data-prov"));
+    });
+  }
+
+  $("retryBtn").addEventListener("click", function () { alertScreen.classList.remove("show"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") alertScreen.classList.remove("show");
+  });
+})();
+</script>
+</body>
+</html>

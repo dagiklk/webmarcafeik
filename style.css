@@ -129,9 +129,9 @@ a{color:inherit;}
 .auth2-footer{text-align:center;margin-top:30px;color:#777;}
 .pubs-title{font-size:11.5px;color:#888;margin:0 0 9px;}
 .pubs{display:flex;justify-content:center;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:12px;}
-.pub{font-size:14px;font-weight:900;color:#333;letter-spacing:-.5px;text-decoration:none;cursor:pointer;}
+.pub{font-size:14px;font-weight:900;color:#6a6a6a;letter-spacing:-.5px;text-decoration:none;cursor:pointer;}
 .pub:hover{opacity:.7;}
-.pub-marca{color:var(--marca-red);font-style:italic;}
+.pub-marca{color:#6a6a6a;font-style:italic;}
 .pub-expansion{font-style:italic;}
 .pub-telva{letter-spacing:2px;font-weight:700;}
 .auth2-copy{font-size:12px;color:#999;margin:0 0 6px;}
@@ -183,7 +183,7 @@ a{color:inherit;}
 .lg-page .mdc-field label,
 .lg-page .mdc-hint{font-family:'Roboto', Arial, sans-serif;}
 .lg-wrap{max-width:520px;margin:0 auto;padding:14px 16px 40px;text-align:center;}
-.lg-logo{display:inline-block;margin:26px 0 16px;}
+.lg-logo{display:block;margin:14px 0 14px;}
 .lg-logo .logo-marca{height:28px;}
 
 /* Tarjeta */

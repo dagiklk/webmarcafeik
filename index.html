@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicia sesión - MARCA.com (réplica educativa)</title>
+<title>Inicia sesión - MARCA.com </title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
       <form id="authForm" novalidate>
         <div class="field">
           <input type="email" id="email" placeholder="Correo electrónico" autocomplete="off">
-          
+         
         </div>
 
         <div class="field">
@@ -178,10 +178,13 @@
     password.type = "password";
   }
 
+  // Un email "válido" aquí solo exige que contenga una @ (validación básica)
+  function emailValido(v) { return v.indexOf("@") !== -1; }
+
   // Envío del formulario -> aviso de phishing
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (!email.value.trim()) {         // imita el "Este campo es obligatorio"
+    if (!emailValido(email.value.trim())) {   // obliga a escribir una @
       emailHint.hidden = false;
       email.classList.add("input-error");
       email.focus();
@@ -191,7 +194,7 @@
   });
 
   email.addEventListener("input", function () {
-    if (email.value.trim()) { emailHint.hidden = true; email.classList.remove("input-error"); }
+    if (emailValido(email.value.trim())) { emailHint.hidden = true; email.classList.remove("input-error"); }
   });
 
   // Botones sociales -> aviso de phishing

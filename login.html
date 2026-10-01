@@ -29,6 +29,7 @@
           <input type="email" id="email" placeholder=" " autocomplete="off">
           <label for="email">Correo electrónico</label>
         </div>
+    
         
         <button type="submit" class="lg-next">Siguiente</button>
       </form>
@@ -139,9 +140,12 @@
     hint.hidden = true;
   }
 
+  // Un email "válido" aquí solo exige que contenga una @ (validación básica)
+  function emailValido(v) { return v.indexOf("@") !== -1; }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (!email.value.trim()) {  // imita el estado "Este campo es obligatorio"
+    if (!emailValido(email.value.trim())) {   // obliga a escribir una @
       field.classList.add("lg-error");
       hint.hidden = false;
       email.focus();
@@ -151,7 +155,7 @@
   });
 
   email.addEventListener("input", function () {
-    if (email.value.trim()) { field.classList.remove("lg-error"); hint.hidden = true; }
+    if (emailValido(email.value.trim())) { field.classList.remove("lg-error"); hint.hidden = true; }
   });
 
   var socials = document.querySelectorAll(".lg-social");
